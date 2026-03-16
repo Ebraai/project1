@@ -11,7 +11,10 @@ from pathlib import Path
 from typing import AsyncGenerator
 
 import anthropic
+from dotenv import load_dotenv
 from fastapi import FastAPI, HTTPException
+
+load_dotenv(Path(__file__).parent / ".env")
 from fastapi.responses import HTMLResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
