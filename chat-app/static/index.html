@@ -440,6 +440,176 @@
     .empty-state h2 { font-size: 16px; color: var(--text); }
     .empty-state p { font-size: 13px; max-width: 320px; line-height: 1.6; }
 
+    /* ── Analyze button ── */
+    .analyze-wrap {
+      align-self: flex-end;
+      margin-top: 4px;
+    }
+    .analyze-btn {
+      background: transparent;
+      border: 1px dashed var(--accent);
+      color: var(--accent-light);
+      padding: 7px 16px;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 13px;
+      transition: all 0.2s;
+    }
+    .analyze-btn:hover { background: rgba(99,102,241,0.1); }
+    .analyze-btn:disabled { opacity: 0.4; cursor: not-allowed; }
+
+    /* ── Analysis card ── */
+    .analysis-card {
+      align-self: stretch;
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-top: 8px;
+    }
+    .analysis-header {
+      background: rgba(99,102,241,0.15);
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .analysis-score {
+      background: var(--accent);
+      color: white;
+      padding: 2px 10px;
+      border-radius: 20px;
+      font-size: 12px;
+    }
+    .analysis-score.high { background: var(--green); }
+    .analysis-score.mid { background: var(--yellow); }
+    .analysis-score.low { background: var(--red); }
+    .analysis-summary {
+      padding: 10px 16px;
+      font-size: 13px;
+      color: var(--text);
+      border-bottom: 1px solid var(--border);
+      line-height: 1.6;
+    }
+    .issues-list {
+      padding: 10px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+    .issue-item {
+      font-size: 12px;
+      color: var(--yellow);
+      display: flex;
+      gap: 6px;
+      align-items: flex-start;
+    }
+    .proposals-section {
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .proposals-title {
+      font-size: 11px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 4px;
+    }
+    .proposal-card {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .proposal-card.approved { border-color: var(--green); }
+    .proposal-card.rejected { border-color: var(--red); opacity: 0.6; }
+    .proposal-card.failed { border-color: var(--yellow); }
+    .proposal-head {
+      padding: 8px 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .proposal-desc { font-size: 13px; font-weight: 600; }
+    .proposal-file { font-size: 11px; color: var(--muted); font-family: monospace; }
+    .diff-wrap { padding: 10px 12px; display: flex; flex-direction: column; gap: 8px; }
+    .diff-block { border-radius: 5px; overflow: hidden; }
+    .diff-label {
+      font-size: 10px;
+      font-weight: 600;
+      padding: 3px 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .diff-old .diff-label { background: rgba(239,68,68,0.2); color: #f87171; }
+    .diff-new .diff-label { background: rgba(34,197,94,0.2); color: #4ade80; }
+    .diff-text {
+      padding: 8px 10px;
+      font-size: 12px;
+      line-height: 1.6;
+      white-space: pre-wrap;
+      word-break: break-word;
+      font-family: 'Fira Code', monospace;
+      background: rgba(0,0,0,0.2);
+      direction: rtl;
+      text-align: right;
+    }
+    .proposal-reason {
+      padding: 6px 12px 8px;
+      font-size: 12px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      font-style: italic;
+    }
+    .proposal-actions {
+      padding: 8px 12px;
+      display: flex;
+      gap: 8px;
+      border-top: 1px solid var(--border);
+    }
+    .btn-approve {
+      background: rgba(34,197,94,0.15);
+      border: 1px solid var(--green);
+      color: var(--green);
+      padding: 5px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .btn-approve:hover { background: rgba(34,197,94,0.3); }
+    .btn-reject {
+      background: rgba(239,68,68,0.1);
+      border: 1px solid var(--red);
+      color: var(--red);
+      padding: 5px 14px;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 12px;
+    }
+    .btn-reject:hover { background: rgba(239,68,68,0.25); }
+    .status-badge {
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-weight: 600;
+    }
+    .status-badge.approved { background: rgba(34,197,94,0.2); color: var(--green); }
+    .status-badge.rejected { background: rgba(239,68,68,0.15); color: var(--red); }
+    .status-badge.failed { background: rgba(245,158,11,0.2); color: var(--yellow); }
+    .no-proposals {
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--green);
+      text-align: center;
+    }
+
     /* Scrollbar */
     ::-webkit-scrollbar { width: 5px; }
     ::-webkit-scrollbar-track { background: transparent; }
@@ -591,6 +761,8 @@
   let isStreaming = false;
   let currentStage = 0;
   let sidebarOpen = true;
+  let lastCallJson = null;
+  let currentUpdateId = null;
 
   let config = {
     customer_name: 'أحمد العتيبي',
@@ -884,6 +1056,7 @@
       // Save to history
       history.push({ role: 'assistant', content: fullText });
       detectStage(fullText);
+      postProcessAgentMessage(agentDiv, fullText);
 
     } catch (e) {
       removeTypingIndicator();
@@ -893,6 +1066,206 @@
     isStreaming = false;
     document.getElementById('sendBtn').disabled = false;
     document.getElementById('user-input').focus();
+  }
+
+  // ── Post-process agent message (extract JSON block) ────────────────────────
+  function postProcessAgentMessage(agentDiv, fullText) {
+    const jsonBlockMatch = fullText.match(/```json\s*([\s\S]*?)\s*```\s*$/);
+    const bareJsonMatch = !jsonBlockMatch && fullText.match(/(\{[\s\S]*"call_id"[\s\S]*\})\s*$/);
+    const match = jsonBlockMatch || bareJsonMatch;
+    if (!match) return;
+
+    const jsonText = match[1];
+    const preText = fullText.slice(0, match.index).trim();
+
+    try {
+      const parsed = JSON.parse(jsonText);
+      lastCallJson = parsed;
+
+      // Update bubble to show only pre-JSON speech
+      const bubble = agentDiv.querySelector('.bubble');
+      if (bubble) bubble.innerHTML = preText ? renderText(preText) : '';
+
+      const wrap = document.getElementById('messages');
+
+      // Render JSON block
+      const jsonDiv = document.createElement('div');
+      jsonDiv.className = 'json-output';
+      jsonDiv.innerHTML = `
+        <div class="json-output-header">📊 مخرجات CRM — بعد انتهاء المكالمة</div>
+        <pre>${JSON.stringify(parsed, null, 2)}</pre>
+      `;
+      wrap.appendChild(jsonDiv);
+
+      // Analyze button
+      const analyzeWrap = document.createElement('div');
+      analyzeWrap.className = 'analyze-wrap';
+      analyzeWrap.id = 'analyzeWrap';
+      analyzeWrap.innerHTML = `<button class="analyze-btn" id="analyzeBtn" onclick="analyzeCall()">🔬 تحليل المكالمة واقتراح تحسينات للـ Skill</button>`;
+      wrap.appendChild(analyzeWrap);
+
+      advanceStage(6);
+      scrollToBottom();
+    } catch {}
+  }
+
+  // ── Analyze call ────────────────────────────────────────────────────────────
+  async function analyzeCall() {
+    const btn = document.getElementById('analyzeBtn');
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ جارٍ التحليل...'; }
+
+    try {
+      const res = await fetch('/api/analyze-call', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          transcript: history,
+          call_json: lastCallJson,
+          config,
+        }),
+      });
+
+      if (!res.ok) {
+        const err = await res.json();
+        addSystemMsg(`❌ فشل التحليل: ${err.detail || 'خطأ غير معروف'}`);
+        if (btn) { btn.disabled = false; btn.textContent = '🔬 تحليل المكالمة'; }
+        return;
+      }
+
+      const update = await res.json();
+      currentUpdateId = update.id;
+
+      // Remove analyze button and render card
+      const wrap = document.getElementById('analyzeWrap');
+      if (wrap) wrap.remove();
+
+      renderAnalysisCard(update);
+    } catch (e) {
+      addSystemMsg(`❌ خطأ: ${e.message}`);
+      if (btn) { btn.disabled = false; btn.textContent = '🔬 تحليل المكالمة'; }
+    }
+  }
+
+  // ── Render analysis card ────────────────────────────────────────────────────
+  function renderAnalysisCard(update) {
+    const wrap = document.getElementById('messages');
+    const card = document.createElement('div');
+    card.className = 'analysis-card';
+    card.id = `analysis-${update.id}`;
+
+    const scoreClass = update.score >= 8 ? 'high' : update.score >= 5 ? 'mid' : 'low';
+
+    const issuesHTML = update.issues.length
+      ? update.issues.map(i => `<div class="issue-item">⚠ ${i}</div>`).join('')
+      : '<div class="issue-item" style="color:var(--green)">✓ لا توجد مشاكل واضحة</div>';
+
+    const proposalsHTML = update.proposals.length === 0
+      ? `<div class="no-proposals">✅ الأداء ممتاز — لا توجد مقترحات تحسين</div>`
+      : `<div class="proposals-title">مقترحات التحسين (${update.proposals.length})</div>
+         ${update.proposals.map(p => renderProposalCard(update.id, p)).join('')}`;
+
+    card.innerHTML = `
+      <div class="analysis-header">
+        <span>🔬 تحليل تلقائي — ${update.call_id}</span>
+        <span class="analysis-score ${scoreClass}">${update.score}/10</span>
+      </div>
+      <div class="analysis-summary">${update.summary}</div>
+      <div class="issues-list">${issuesHTML}</div>
+      <div class="proposals-section" id="proposals-${update.id}">${proposalsHTML}</div>
+    `;
+
+    wrap.appendChild(card);
+    scrollToBottom();
+  }
+
+  function renderProposalCard(updateId, p) {
+    const statusBadge = p.status !== 'pending'
+      ? `<span class="status-badge ${p.status}">${p.status === 'approved' ? '✅ تمت الموافقة' : p.status === 'rejected' ? '❌ مرفوض' : '⚠ فشل التطبيق'}</span>`
+      : '';
+    const actions = p.status === 'pending'
+      ? `<div class="proposal-actions">
+           <button class="btn-approve" onclick="approveProposal('${updateId}','${p.id}',this)">✅ وافق وطبّق</button>
+           <button class="btn-reject" onclick="rejectProposal('${updateId}','${p.id}',this)">❌ ارفض</button>
+         </div>`
+      : '';
+
+    return `
+      <div class="proposal-card ${p.status !== 'pending' ? p.status : ''}" id="proposal-${updateId}-${p.id}">
+        <div class="proposal-head">
+          <div>
+            <div class="proposal-desc">${p.description}</div>
+            <div class="proposal-file">${p.file}</div>
+          </div>
+          ${statusBadge}
+        </div>
+        <div class="diff-wrap">
+          <div class="diff-block diff-old">
+            <div class="diff-label">قبل</div>
+            <div class="diff-text">${escHtml(p.old_text)}</div>
+          </div>
+          <div class="diff-block diff-new">
+            <div class="diff-label">بعد</div>
+            <div class="diff-text">${escHtml(p.new_text)}</div>
+          </div>
+        </div>
+        <div class="proposal-reason">💡 ${p.reason}</div>
+        ${actions}
+      </div>
+    `;
+  }
+
+  function escHtml(str) {
+    return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+  }
+
+  // ── Approve / Reject proposal ───────────────────────────────────────────────
+  async function approveProposal(updateId, proposalId, btn) {
+    btn.disabled = true;
+    btn.textContent = '⏳';
+    try {
+      const res = await fetch(`/api/updates/${updateId}/proposals/${proposalId}/approve`, { method: 'POST' });
+      const data = await res.json();
+      const card = document.getElementById(`proposal-${updateId}-${proposalId}`);
+      if (card) {
+        card.className = `proposal-card ${data.status}`;
+        const actions = card.querySelector('.proposal-actions');
+        const head = card.querySelector('.proposal-head');
+        if (actions) actions.remove();
+        if (head) {
+          const badge = document.createElement('span');
+          badge.className = `status-badge ${data.status}`;
+          badge.textContent = data.status === 'approved' ? '✅ تمت الموافقة' : '⚠ فشل التطبيق';
+          head.appendChild(badge);
+        }
+      }
+      if (data.status === 'approved') addSystemMsg('✅ تم تطبيق التحديث على الـ Skill');
+      else addSystemMsg(`⚠ فشل التطبيق: ${data.error || 'النص غير موجود في الملف'}`);
+    } catch (e) {
+      addSystemMsg(`❌ خطأ: ${e.message}`);
+      btn.disabled = false;
+    }
+  }
+
+  async function rejectProposal(updateId, proposalId, btn) {
+    btn.disabled = true;
+    try {
+      await fetch(`/api/updates/${updateId}/proposals/${proposalId}/reject`, { method: 'POST' });
+      const card = document.getElementById(`proposal-${updateId}-${proposalId}`);
+      if (card) {
+        card.className = 'proposal-card rejected';
+        const actions = card.querySelector('.proposal-actions');
+        const head = card.querySelector('.proposal-head');
+        if (actions) actions.remove();
+        if (head) {
+          const badge = document.createElement('span');
+          badge.className = 'status-badge rejected';
+          badge.textContent = '❌ مرفوض';
+          head.appendChild(badge);
+        }
+      }
+    } catch (e) {
+      addSystemMsg(`❌ خطأ: ${e.message}`);
+    }
   }
 
   // ── Init ───────────────────────────────────────────────────────────────────
