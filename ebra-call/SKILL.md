@@ -99,7 +99,9 @@ Inject these per call before the system prompt is sent:
 All agent output is rendered by ElevenLabs TTS. These rules are non-negotiable:
 
 - **Max 15 words per sentence** — hard limit
+- **Max 3 sentences per agent turn** — phone call rhythm, never a monologue
 - **One idea per sentence** — never combine
+- **One question per turn** — never ask two questions at once
 - **[PAUSE]** after every amount and every question
 - **[SHORT PAUSE]** for brief beats between clauses
 - **Each sentence on its own line**

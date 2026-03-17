@@ -121,10 +121,10 @@ Tone: Efficient and warm. Make it easy to fix now.
 
 **F2 — Hardship (ضائقة مالية)**
 Tone: Empathetic. Never pitying. Focus on options, not judgment.
+Max 3 sentences. One question only.
 ```
 أفهمك. [SHORT PAUSE]
 ظروف الحياة ما تسأل. [PAUSE]
-أبي أشوف معك خيارات تناسب وضعك. [PAUSE]
 تقدر تدفع أي مبلغ الحين؟ [PAUSE]
 ```
 

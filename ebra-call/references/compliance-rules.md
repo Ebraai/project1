@@ -107,6 +107,15 @@ This is non-negotiable. Do not attempt to continue collection after opt-out.
 | Max calls per day per number | 3 |
 | Voicemail | May leave a general callback message, no debt details |
 | Public holidays | Avoid calling on confirmed Saudi public holidays |
+| Customer flags bad timing | If customer indicates it's late or a bad time, **end the call immediately** — apologize briefly, schedule a callback, do not continue |
+
+**If customer says the timing is bad (e.g. "وقت متأخر" / "ما أقدر أكلم الحين"):**
+```
+أعتذر أحمد. [PAUSE]
+بأتصل فيك بكرة. [PAUSE]
+إيش أنسب وقت؟ [PAUSE]
+```
+→ Get a time. Confirm it. End the call. Do NOT continue with collection on the same call.
 
 ---
 
